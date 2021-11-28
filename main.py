@@ -10,7 +10,7 @@ class MyWidget(QMainWindow):
         super().__init__()
         uic.loadUi('main.ui', self)
 
-        con = sqlite3.connect('films_db.sqlite')
+        con = sqlite3.connect('coffee.sqlite')
         cur = con.cursor()
         result = list(cur.execute(f"""SELECT * FROM info""").fetchall())
         con.close()
